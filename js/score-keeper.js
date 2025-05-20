@@ -16,3 +16,33 @@ teamA.textContent = `Team A: ${scoreA}`;
 teamB.textContent = `Team B: ${scoreB}`;
 maxScore.textContent = `First to ${winningScore}`;
 maxGoals.value = winningScore;
+
+teamAScored.addEventListener("click", function(){
+    console.log("Team A scored!");
+    scoreA++;
+    teamA.textContent = `Team A: ${scoreA}`;
+    if (scoreA === winningScore) {
+        console.log("Team A wins!");
+        teamAScored.disabled = true;
+        teamBScored.disabled = true;
+    }
+});
+
+teamBScored.addEventListener("click", function(){
+    console.log("Team B scored!");
+    scoreB++;
+    teamB.textContent = `Team B: ${scoreB}`;
+    if (scoreB === winningScore) {
+        console.log("Team B wins!");
+        teamAScored.disabled = true;
+        teamBScored.disabled = true;
+    }
+});
+
+resetScore.addEventListener("click", function(){
+    console.log("Game reset!");
+});
+
+maxGoals.addEventListener("change", function(e){
+    console.log("Max goals changed to:", e.target.value);
+});
