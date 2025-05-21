@@ -59,4 +59,8 @@ resetScore.addEventListener("click", function(){
 
 maxGoals.addEventListener("change", function(e){
     console.log("Max goals changed to:", e.target.value);
+    let newMaxScore = parseInt(e.target.value);
+    winningScore = newMaxScore;
+    maxScore.textContent = `First to ${winningScore}`;
+    resetGame();
 });
