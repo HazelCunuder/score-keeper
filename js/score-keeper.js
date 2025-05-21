@@ -44,8 +44,17 @@ teamBScored.addEventListener("click", function(){
     }
 });
 
+function resetGame() {
+    scoreA = 0;
+    scoreB = 0;
+    teamA.textContent = `Team A: ${scoreA}`;
+    teamB.textContent = `Team B: ${scoreB}`;
+    teamAScored.disabled = false;
+    teamBScored.disabled = false;
+}
+
 resetScore.addEventListener("click", function(){
-    console.log("Game reset!");
+    resetGame();
 });
 
 maxGoals.addEventListener("change", function(e){
