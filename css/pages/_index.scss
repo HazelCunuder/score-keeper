@@ -2,11 +2,13 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
   background-color: var.$background-color;
+  background-image: linear-gradient(to bottom right, var.$background-color, #D6EEF1);
 }
 
 .scoreboard {
@@ -36,27 +38,29 @@ body {
 }
 
 label[for="max-goals"] {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var.$text-color;
   margin-left: var.$padding-small;
   flex-basis: 100%;
   text-align: center;
   margin-top: var.$padding-small;
+  font-weight: 500;
 }
 
 input[type="number"]#max-goals {
   padding: var.$padding-small;
-  border: 1px solid var.$border-color;
+  border: 2px solid var.$border-color;
   border-radius: var.$border-radius;
-  font-size: 1rem;
-  width: 80px;
+  font-size: 1.1rem;
+  width: 90px;
   text-align: center;
   flex-grow: 0;
   margin: 0 auto;
+  appearance: textfield;
 
   &:focus {
     outline: none;
     border-color: var.$accent-color;
-    box-shadow: 0 0 0 2px rgba(var.$accent-color, 0.3);
+    box-shadow: 0 0 0 3px rgba(var.$accent-color, 0.4);
   }
 }
