@@ -10,6 +10,9 @@
   font-size: 1rem;
   transition: background-color 0.2s ease-in-out, filter 0.2s ease-in-out;
   flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
 
   &:hover {
     filter: brightness(1.1);
@@ -20,7 +23,7 @@
   }
 
   &:disabled {
-    background-color: #cccccc;
+    background-color: var.$disabled-color;
     cursor: not-allowed;
     filter: none;
   }
