@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as var;
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var.$background-color;
+  background-image: linear-gradient(to bottom right, var.$background-color, #D6EEF1);
+}
+
+.scoreboard {
+  max-width: 550px;
+  width: 90%;
+  margin: var.$spacing-unit auto;
+  padding: var.$padding-large;
+  background-color: var.$card-background;
+  border-radius: var.$border-radius;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: var.$spacing-unit;
+  text-align: center;
+  border: 4px solid var.$border-color;
+}
+
+#commands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var.$padding-small;
+  margin-top: var.$spacing-unit;
+  padding-top: var.$spacing-unit;
+  border-top: 1px dashed var.$border-color;
+}
+
+label[for="max-goals"] {
+  font-size: 1rem;
+  color: var.$text-color;
+  margin-left: var.$padding-small;
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: var.$padding-small;
+  font-weight: 500;
+}
+
+input[type="number"]#max-goals {
+  padding: var.$padding-small;
+  border: 2px solid var.$border-color;
+  border-radius: var.$border-radius;
+  font-size: 1.1rem;
+  width: 90px;
+  text-align: center;
+  flex-grow: 0;
+  margin: 0 auto;
+  appearance: textfield;
+
+  &:focus {
+    outline: none;
+    border-color: var.$accent-color;
+    box-shadow: 0 0 0 3px rgba(var.$accent-color, 0.4);
+  }
+}
