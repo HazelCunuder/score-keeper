@@ -4,7 +4,9 @@
 input[type="button"] {
   @include mix.button-styles(var.$primary-color);
   flex: 1 1 45%;
-  min-width: 150px;
+  min-width: 160px;
+  padding: var.$padding-small var.$padding-large;
+  font-size: 1.1rem;
 
   &#reset {
     @include mix.button-styles(var.$secondary-color);
